@@ -20,9 +20,9 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #0a192f, #172a46);
-            color: #ffffff;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #f1f5f9;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
@@ -38,14 +38,14 @@
             }
         }
 
-        /* ВЕРНУЛ СТАРЫЙ ПРЕЛОАДЕР */
+        /* ПРЕЛОАДЕР */
         #loader-wrapper {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #0a192f, #172a46);
+            background: linear-gradient(135deg, #0f172a, #1e293b);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -69,7 +69,7 @@
         .wave-loader .dot {
             width: 20px;
             height: 20px;
-            background: #3498db;
+            background: #8b5cf6;
             border-radius: 50%;
             margin: 0 8px;
             animation: wave 1.2s ease-in-out infinite;
@@ -84,30 +84,30 @@
         @keyframes wave {
             0%, 60%, 100% {
                 transform: translateY(0);
-                background: #3498db;
+                background: #8b5cf6;
             }
             30% {
                 transform: translateY(-25px);
-                background: #2ecc71;
+                background: #3b82f6;
             }
         }
 
         .loader-text {
-            color: #3498db;
+            color: #8b5cf6;
             font-size: 1.4em;
             text-align: center;
             font-weight: 600;
         }
 
-        /* Стильный заголовок с красивой иконкой компьютера */
+        /* Стильный заголовок */
         header {
-            background: linear-gradient(135deg, #3498db, #2ecc71);
+            background: linear-gradient(135deg, #8b5cf6, #3b82f6);
             color: white;
             text-align: center;
             padding: 30px 20px;
             border-radius: 20px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -122,11 +122,11 @@
         .logo {
             width: 100%;
             height: 100%;
-            filter: drop-shadow(0 0 20px rgba(52, 152, 219, 0.5));
+            filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.5));
             animation: computer-float 4s ease-in-out infinite;
         }
 
-        /* Красивая анимация для иконки компьютера */
+        /* Анимация для иконки компьютера */
         @keyframes computer-float {
             0%, 100% {
                 transform: translateY(0) rotate(0deg) scale(1);
@@ -142,10 +142,10 @@
         h1 {
             font-size: 3.5em;
             margin: 15px 0;
-            background: linear-gradient(45deg, #ffffff, #3498db);
+            background: linear-gradient(45deg, #ffffff, #c4b5fd);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
             font-weight: 800;
             letter-spacing: 1px;
         }
@@ -159,10 +159,10 @@
 
         .subtitle-small {
             font-size: 1.1em;
-            opacity: 0.8;
+            opacity: 0.9;
         }
 
-        /* Простой и надёжный поиск по сайту */
+        /* Поиск по сайту */
         .search-container {
             max-width: 600px;
             margin: 0 auto 40px;
@@ -181,17 +181,19 @@
             font-size: 1.2em;
             border: none;
             border-radius: 15px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
             color: white;
             backdrop-filter: blur(10px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(139, 92, 246, 0.3);
             transition: all 0.3s ease;
         }
 
         .search-input:focus {
             outline: none;
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+            border-color: #8b5cf6;
         }
 
         .search-input::placeholder {
@@ -203,39 +205,44 @@
             right: 20px;
             top: 50%;
             transform: translateY(-50%);
-            color: #3498db;
+            color: #8b5cf6;
             font-size: 1.5em;
             cursor: pointer;
             transition: color 0.3s ease;
         }
 
         .search-icon:hover {
-            color: #2ecc71;
+            color: #3b82f6;
         }
 
         .search-results {
             font-size: 1.1em;
-            color: #3498db;
+            color: #8b5cf6;
             font-weight: 600;
             transition: all 0.3s ease;
             min-height: 24px;
+            padding: 5px 0;
         }
 
         .search-results.highlight {
-            color: #2ecc71;
+            color: #3b82f6;
             transform: scale(1.05);
-            text-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
         }
 
         .clear-search {
             margin-top: 10px;
             display: inline-block;
-            color: #3498db;
+            color: #8b5cf6;
             cursor: pointer;
-            font-size: 0.9em;
+            font-size: 0.95em;
             transition: color 0.3s ease;
             opacity: 0;
             visibility: hidden;
+            padding: 8px 16px;
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(139, 92, 246, 0.3);
         }
 
         .clear-search.visible {
@@ -244,11 +251,11 @@
         }
 
         .clear-search:hover {
-            color: #2ecc71;
-            text-decoration: underline;
+            color: #3b82f6;
+            background: rgba(139, 92, 246, 0.2);
         }
 
-        /* Увеличиваем текст в сетке */
+        /* Сетка программ */
         .programs-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -266,21 +273,30 @@
         @media (max-width: 768px) {
             .programs-grid {
                 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 15px;
+                gap: 20px;
             }
         }
 
         @media (max-width: 640px) {
             .programs-grid {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 20px;
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .programs-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0;
             }
         }
 
         /* Карточка программы */
         .program-card {
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
             padding: 25px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -291,7 +307,7 @@
             min-height: 320px;
             backdrop-filter: blur(10px);
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(20px);
             animation: card-appear 0.6s forwards;
         }
 
@@ -303,20 +319,7 @@
             }
         }
 
-        /* Задержка для каждой карточки */
-        .program-card:nth-child(1) { animation-delay: 0.1s; }
-        .program-card:nth-child(2) { animation-delay: 0.2s; }
-        .program-card:nth-child(3) { animation-delay: 0.3s; }
-        .program-card:nth-child(4) { animation-delay: 0.4s; }
-        .program-card:nth-child(5) { animation-delay: 0.5s; }
-        .program-card:nth-child(6) { animation-delay: 0.6s; }
-        .program-card:nth-child(7) { animation-delay: 0.7s; }
-        .program-card:nth-child(8) { animation-delay: 0.8s; }
-        .program-card:nth-child(9) { animation-delay: 0.9s; }
-        .program-card:nth-child(10) { animation-delay: 1.0s; }
-        .program-card:nth-child(11) { animation-delay: 1.1s; }
-
-        /* ИСПРАВЛЕННЫЙ СТИЛЬ для скрытых карточек */
+        /* Правильное скрытие карточек */
         .program-card.hidden {
             display: none !important;
         }
@@ -326,19 +329,40 @@
             animation: card-appear 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
+        /* На мобильных убираем сложные анимации */
+        @media (max-width: 768px) {
+            .program-card {
+                animation: none !important;
+                opacity: 1;
+                transform: none;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                min-height: 300px;
+            }
+            
+            .program-card.visible {
+                animation: none !important;
+            }
+        }
+
         .program-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.2);
-            border-color: #3498db;
-            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(139, 92, 246, 0.2);
+            border-color: #8b5cf6;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        @media (max-width: 768px) {
+            .program-card:hover {
+                transform: translateY(-4px);
+            }
         }
 
         .program-icon {
             width: 70px;
             height: 70px;
             margin-bottom: 20px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(46, 204, 113, 0.2));
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2));
             padding: 15px;
             display: flex;
             align-items: center;
@@ -354,11 +378,11 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
         }
 
         .program-card h3 {
-            color: #3498db;
+            color: #c4b5fd;
             margin: 0 0 12px 0;
             font-size: 1.5em;
             line-height: 1.3;
@@ -378,10 +402,10 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #3498db, #2ecc71);
+            background: linear-gradient(135deg, #8b5cf6, #3b82f6);
             color: white;
-            padding: 14px 25px;
-            border-radius: 10px;
+            padding: 16px 28px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
             transition: all 0.3s ease;
@@ -392,30 +416,31 @@
             font-size: 1.2em;
             min-height: 55px;
             margin-top: auto;
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+            box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
         }
 
         .download-btn:hover {
             transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.5);
-            background: linear-gradient(135deg, #2ecc71, #3498db);
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.5);
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
         }
 
         .download-btn .btn-icon {
             width: 24px;
             height: 24px;
+            filter: brightness(0) invert(1);
         }
 
         .version {
             display: inline-block;
-            background: rgba(46, 204, 113, 0.3);
-            color: #2ecc71;
+            background: rgba(59, 130, 246, 0.3);
+            color: #60a5fa;
             padding: 6px 12px;
             border-radius: 20px;
             font-size: 0.9em;
             margin-left: 10px;
             font-weight: 600;
-            border: 1px solid rgba(46, 204, 113, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.5);
         }
 
         .badges-container {
@@ -427,13 +452,13 @@
 
         .os-badge {
             display: inline-block;
-            background: rgba(52, 152, 219, 0.15);
-            color: #3498db;
+            background: rgba(139, 92, 246, 0.15);
+            color: #a78bfa;
             padding: 6px 12px;
             border-radius: 20px;
             font-size: 0.85em;
             font-weight: 600;
-            border: 1px solid rgba(52, 152, 219, 0.3);
+            border: 1px solid rgba(139, 92, 246, 0.3);
         }
 
         .program-info {
@@ -446,19 +471,19 @@
         }
 
         .program-size {
-            color: #2ecc71;
+            color: #60a5fa;
             font-size: 1em;
             font-weight: 600;
         }
 
-        /* Кнопка "Наверх" для smooth scroll */
+        /* Кнопка "Наверх" */
         .scroll-to-top {
             position: fixed;
             bottom: 30px;
             right: 30px;
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #3498db, #2ecc71);
+            background: linear-gradient(135deg, #8b5cf6, #3b82f6);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -466,7 +491,7 @@
             color: white;
             text-decoration: none;
             font-size: 24px;
-            box-shadow: 0 5px 20px rgba(52, 152, 219, 0.4);
+            box-shadow: 0 5px 20px rgba(139, 92, 246, 0.4);
             z-index: 100;
             opacity: 0;
             transform: translateY(20px);
@@ -481,16 +506,16 @@
 
         .scroll-to-top:hover {
             transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.6);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.6);
         }
 
         /* Стильный футер */
         footer {
             text-align: center;
             margin-top: 50px;
-            padding: 25px;
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(46, 204, 113, 0.1));
-            border-radius: 15px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
+            border-radius: 16px;
             font-size: 1.1em;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -510,50 +535,76 @@
         }
 
         .footer-links a {
-            color: #3498db;
+            color: #a78bfa;
             text-decoration: none;
             transition: all 0.3s ease;
             font-size: 1em;
             font-weight: 600;
             padding: 8px 16px;
             border-radius: 20px;
-            background: rgba(52, 152, 219, 0.1);
-            border: 1px solid rgba(52, 152, 219, 0.3);
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
         }
 
         .footer-links a:hover {
-            color: #2ecc71;
-            background: rgba(46, 204, 113, 0.2);
+            color: #60a5fa;
+            background: rgba(59, 130, 246, 0.2);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
         }
 
         /* Адаптивные стили */
         @media (max-width: 768px) {
             body {
                 padding: 15px;
+                font-size: 16px;
             }
             
             header {
                 padding: 25px 15px;
+                margin-bottom: 25px;
+                border-radius: 16px;
             }
             
             h1 {
-                font-size: 2.8em;
+                font-size: 2.4em;
+                margin: 10px 0;
             }
             
             .subtitle {
-                font-size: 1.2em;
+                font-size: 1.1em;
+            }
+            
+            .subtitle-small {
+                font-size: 0.95em;
             }
             
             .logo-container {
-                width: 120px;
-                height: 120px;
+                width: 100px;
+                height: 100px;
+                margin-bottom: 15px;
+            }
+            
+            .search-container {
+                margin-bottom: 30px;
+            }
+            
+            .search-input {
+                padding: 14px 50px 14px 20px;
+                font-size: 1em;
+                border-radius: 12px;
+            }
+            
+            .search-icon {
+                right: 15px;
+                font-size: 1.3em;
             }
             
             .program-card {
                 padding: 20px;
-                min-height: 300px;
+                min-height: 280px;
+                border-radius: 14px;
+                margin: 0;
             }
             
             .program-card h3 {
@@ -561,18 +612,32 @@
             }
             
             .program-card p {
-                font-size: 1em;
+                font-size: 0.95em;
+                line-height: 1.5;
+            }
+            
+            .program-icon {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 15px;
+                padding: 12px;
             }
             
             .download-btn {
-                padding: 12px 20px;
+                padding: 14px 20px;
                 font-size: 1.1em;
                 min-height: 50px;
+                border-radius: 10px;
             }
             
-            .search-input {
-                padding: 15px 55px 15px 20px;
-                font-size: 1.1em;
+            .version {
+                font-size: 0.85em;
+                padding: 4px 10px;
+            }
+            
+            .os-badge {
+                font-size: 0.8em;
+                padding: 5px 10px;
             }
             
             .scroll-to-top {
@@ -582,15 +647,30 @@
                 right: 20px;
                 font-size: 20px;
             }
+            
+            footer {
+                padding: 25px 15px;
+                margin-top: 40px;
+                border-radius: 14px;
+            }
+            
+            footer p {
+                font-size: 1em;
+            }
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 2.2em;
+                font-size: 2em;
             }
             
             .subtitle {
-                font-size: 1.1em;
+                font-size: 1em;
+            }
+            
+            .logo-container {
+                width: 80px;
+                height: 80px;
             }
             
             .programs-grid {
@@ -599,21 +679,25 @@
             
             .program-card {
                 padding: 18px;
-                min-height: 280px;
+                min-height: 260px;
             }
             
             .program-icon {
-                width: 60px;
-                height: 60px;
-                padding: 12px;
+                width: 50px;
+                height: 50px;
+                padding: 10px;
             }
             
             .program-card h3 {
                 font-size: 1.2em;
             }
             
+            .program-card p {
+                font-size: 0.9em;
+            }
+            
             .download-btn {
-                padding: 10px 18px;
+                padding: 12px 18px;
                 font-size: 1em;
                 min-height: 48px;
             }
@@ -625,13 +709,40 @@
             }
             
             .footer-links a {
-                width: 200px;
+                width: 90%;
+                max-width: 250px;
                 text-align: center;
+                padding: 10px;
             }
             
             .search-input {
-                padding: 12px 50px 12px 18px;
-                font-size: 1em;
+                padding: 12px 45px 12px 15px;
+                font-size: 0.95em;
+            }
+        }
+
+        @media (max-width: 360px) {
+            body {
+                padding: 12px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .program-card {
+                padding: 15px;
+                min-height: 250px;
+            }
+            
+            .program-icon {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .download-btn {
+                padding: 10px 15px;
+                font-size: 0.95em;
             }
         }
     </style>
@@ -650,7 +761,6 @@
 
     <header>
         <div class="logo-container">
-            <!-- Красивая иконка компьютера -->
             <img src="https://img.icons8.com/fluency/480/000000/computer.png" alt="Каталог программ" class="logo">
         </div>
         <h1>КАТАЛОГ ПРОГРАММ</h1>
@@ -658,7 +768,7 @@
         <p class="subtitle subtitle-small">Безопасные скачивания • Актуальные версии • Официальные источники</p>
     </header>
 
-    <!-- Простой и надёжный поиск по сайту -->
+    <!-- Поиск по сайту -->
     <div class="search-container">
         <div class="search-wrapper">
             <input 
@@ -670,7 +780,7 @@
             >
             <div class="search-icon" id="searchButton">🔍</div>
         </div>
-        <div class="search-results" id="searchResults">Всего программ: 11</div>
+        <div class="search-results" id="searchResults">Всего программ: 29</div>
         <div class="clear-search" id="clearSearch">Очистить поиск</div>
     </div>
 
@@ -858,7 +968,7 @@
                 <span class="os-badge">Лаунчер</span>
             </div>
             <p>Продвинутый лаунчер для Minecraft с удобным управлением модами, шейдерами и сборками. Поддержка нескольких аккаунтов.</p>
-            <a href="https://prismlauncher.org/download/windows/" class="download-btn">
+            <a href="https://github.com/Diegiwg/PrismLauncher-Cracked/releases" class="download-btn">
                 <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
                 Скачать
             </a>
@@ -905,16 +1015,394 @@
                 Скачать
             </a>
         </div>
+
+        <!-- Mozilla Firefox -->
+        <div class="program-card" data-search="mozilla firefox браузер интернет">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/firefox.png" alt="Firefox">
+            </div>
+            <div class="program-info">
+                <h3>Mozilla Firefox <span class="version">123.0</span></h3>
+                <span class="program-size">65 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Браузер</span>
+                <span class="os-badge">Открытый исходный код</span>
+                <span class="os-badge">Приватность</span>
+            </div>
+            <p>Быстрый и безопасный браузер с открытым исходным кодом. Защита приватности, множество расширений и кастомизация.</p>
+            <a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=ru" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- Vivaldi -->
+        <div class="program-card" data-search="vivaldi браузер настройка">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/vivaldi.png" alt="Vivaldi">
+            </div>
+            <div class="program-info">
+                <h3>Vivaldi <span class="version">6.5</span></h3>
+                <span class="program-size">90 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Браузер</span>
+                <span class="os-badge">Кастомизация</span>
+                <span class="os-badge">Встроенные инструменты</span>
+            </div>
+            <p>Мощный браузер с невероятными возможностями настройки. Встроенные заметки, менеджер панелей и жесты мыши.</p>
+            <a href="https://downloads.vivaldi.com/stable/Vivaldi.6.5.3206.44.x64.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- 4K Video Downloader Plus -->
+        <div class="program-card" data-search="4k video downloader plus загрузчик видео youtube">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/download-from-youtube.png" alt="4K Video Downloader Plus">
+            </div>
+            <div class="program-info">
+                <h3>4K Video Downloader Plus <span class="version">1.4.1</span></h3>
+                <span class="program-size">150 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Загрузчик видео</span>
+                <span class="os-badge">YouTube</span>
+                <span class="os-badge">4K/8K</span>
+            </div>
+            <p>Загрузка видео и аудио с популярных сайтов в высоком качестве, включая 4K и 8K. Поддержка плейлистов и каналов.</p>
+            <a href="https://dl.4kdownload.com/app/4kvideodownloaderplus_1.4.1_x64.msi" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- HandBrake -->
+        <div class="program-card" data-search="handbrake конвертер видео">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/video-converter.png" alt="HandBrake">
+            </div>
+            <div class="program-info">
+                <h3>HandBrake <span class="version">1.7.2</span></h3>
+                <span class="program-size">25 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Конвертер видео</span>
+                <span class="os-badge">Открытый исходный код</span>
+                <span class="os-badge">Оптимизация</span>
+            </div>
+            <p>Бесплатный конвертер видео с открытым исходным кодом. Поддержка всех популярных форматов и мощные настройки сжатия.</p>
+            <a href="https://github.com/HandBrake/HandBrake/releases/download/1.7.2/HandBrake-1.7.2-x86_64-Win_GUI.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- CapCut -->
+        <div class="program-card" data-search="capcut видеоредактор монтаж">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/video-editing.png" alt="CapCut">
+            </div>
+            <div class="program-info">
+                <h3>CapCut <span class="version">2.5.0</span></h3>
+                <span class="program-size">800 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Видеоредактор</span>
+                <span class="os-badge">Монтаж</span>
+                <span class="os-badge">Эффекты</span>
+            </div>
+            <p>Профессиональный видеоредактор с искусственным интеллектом. Автоматическая коррекция, эффекты и переходы.</p>
+            <a href="https://lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/CapCut_2_5_0_537_capcutpc_0.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- OBS Studio -->
+        <div class="program-card" data-search="obs studio стриминг запись экрана">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/obs-studio.png" alt="OBS Studio">
+            </div>
+            <div class="program-info">
+                <h3>OBS Studio <span class="version">30.0.0</span></h3>
+                <span class="program-size">100 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Запись экрана</span>
+                <span class="os-badge">Стриминг</span>
+                <span class="os-badge">Прямой эфир</span>
+            </div>
+            <p>Профессиональное ПО для записи экрана и стриминга. Прямые трансляции на Twitch, YouTube и другие платформы.</p>
+            <a href="https://cdn-fastly.obsproject.com/downloads/OBS-Studio-30.0.0-Full-Installer-x64.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- Audacity -->
+        <div class="program-card" data-search="audacity аудио редактор запись звука">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/audacity.png" alt="Audacity">
+            </div>
+            <div class="program-info">
+                <h3>Audacity <span class="version">3.4.2</span></h3>
+                <span class="program-size">25 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Аудиоредактор</span>
+                <span class="os-badge">Запись звука</span>
+                <span class="os-badge">Эффекты</span>
+            </div>
+            <p>Мощный аудиоредактор для записи и редактирования звука. Поддержка плагинов и множество эффектов.</p>
+            <a href="https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-64bit.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- AnyDesk -->
+        <div class="program-card" data-search="anydesk удаленный доступ">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/anydesk.png" alt="AnyDesk">
+            </div>
+            <div class="program-info">
+                <h3>AnyDesk <span class="version">8.0.8</span></h3>
+                <span class="program-size">5 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Удаленный доступ</span>
+                <span class="os-badge">Удаленное управление</span>
+                <span class="os-badge">Безопасность</span>
+            </div>
+            <p>Программа для удаленного доступа к компьютерам. Высокая скорость соединения и безопасное шифрование.</p>
+            <a href="https://download.anydesk.com/AnyDesk.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- MPC-HC -->
+        <div class="program-card" data-search="mpc-hc медиаплеер видео">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/play-button-circled.png" alt="MPC-HC">
+            </div>
+            <div class="program-info">
+                <h3>MPC-HC <span class="version">2.0.0</span></h3>
+                <span class="program-size">15 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Медиаплеер</span>
+                <span class="os-badge">Легкий</span>
+                <span class="os-badge">Множество кодеков</span>
+            </div>
+            <p>Легкий и быстрый медиаплеер для Windows с поддержкой всех популярных видео и аудио форматов.</p>
+            <a href="https://github.com/clsid2/mpc-hc/releases/download/2.0.0/MPC-HC.2.0.0.x64.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- ShareX -->
+        <div class="program-card" data-search="sharex скриншот захват экрана">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/screenshot.png" alt="ShareX">
+            </div>
+            <div class="program-info">
+                <h3>ShareX <span class="version">15.0.0</span></h3>
+                <span class="program-size">10 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Скриншоты</span>
+                <span class="os-badge">Запись экрана</span>
+                <span class="os-badge">Публикация</span>
+            </div>
+            <p>Мощный инструмент для захвата экрана и записи видео. Автоматическая загрузка на облачные сервисы.</p>
+            <a href="https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- Everything -->
+        <div class="program-card" data-search="everything поиск файлов">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/search.png" alt="Everything">
+            </div>
+            <div class="program-info">
+                <h3>Everything <span class="version">1.4.1</span></h3>
+                <span class="program-size">2 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Поиск файлов</span>
+                <span class="os-badge">Мгновенный поиск</span>
+                <span class="os-badge">Легкий</span>
+            </div>
+            <p>Утилита для мгновенного поиска файлов и папок на компьютере по имени. Индексирует миллионы файлов за секунды.</p>
+            <a href="https://www.voidtools.com/Everything-1.4.1.1024.x64.msi" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- Windhawk -->
+        <div class="program-card" data-search="windhawk настройка windows твикер">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/windows11.png" alt="Windhawk">
+            </div>
+            <div class="program-info">
+                <h3>Windhawk <span class="version">1.5.0</span></h3>
+                <span class="program-size">10 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Настройка Windows</span>
+                <span class="os-badge">Твикер</span>
+                <span class="os-badge">Кастомизация</span>
+            </div>
+            <p>Платформа для настройки и кастомизации Windows. Модификации интерфейса и добавление новых функций.</p>
+            <a href="https://windhawk.net/downloads/WindhawkSetup.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- CrystalDiskInfo -->
+        <div class="program-card" data-search="crystaldiskinfo жесткий диск здоровье">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/hard-drive.png" alt="CrystalDiskInfo">
+            </div>
+            <div class="program-info">
+                <h3>CrystalDiskInfo <span class="version">9.2.1</span></h3>
+                <span class="program-size">5 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Диагностика дисков</span>
+                <span class="os-badge">SMART</span>
+                <span class="os-badge">Мониторинг здоровья</span>
+            </div>
+            <p>Программа для мониторинга здоровья жестких дисков и SSD. Отображение температуры, S.M.A.R.T. атрибутов.</p>
+            <a href="https://crystalmark.info/download/zz/CrystalDiskInfo9_2_1.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- Paint.NET -->
+        <div class="program-card" data-search="paint.net графический редактор">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/paint.png" alt="Paint.NET">
+            </div>
+            <div class="program-info">
+                <h3>Paint.NET <span class="version">5.0.12</span></h3>
+                <span class="program-size">30 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Графический редактор</span>
+                <span class="os-badge">Редактирование фото</span>
+                <span class="os-badge">Плагины</span>
+            </div>
+            <p>Бесплатный графический редактор с поддержкой слоев, эффектов и плагинов. Простой интерфейс и мощные возможности.</p>
+            <a href="https://github.com/paintdotnet/release/releases/download/v5.0.12/paint.net.5.0.12.install.anycpu.web.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- qBitTorrent -->
+        <div class="program-card" data-search="qbittorrent торрент загрузка">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/bittorrent.png" alt="qBitTorrent">
+            </div>
+            <div class="program-info">
+                <h3>qBitTorrent <span class="version">4.6.3</span></h3>
+                <span class="program-size">20 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Торрент-клиент</span>
+                <span class="os-badge">Открытый исходный код</span>
+                <span class="os-badge">Без рекламы</span>
+            </div>
+            <p>Свободный торрент-клиент с открытым исходным кодом. Нет рекламы, встроенный поиск и поддержка RSS.</p>
+            <a href="https://github.com/qbittorrent/qBittorrent/releases/download/release-4.6.3/qbittorrent_4.6.3_x64_setup.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- Notepad++ -->
+        <div class="program-card" data-search="notepad++ текстовый редактор программирование">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/notepad++.png" alt="Notepad++">
+            </div>
+            <div class="program-info">
+                <h3>Notepad++ <span class="version">8.6</span></h3>
+                <span class="program-size">5 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Текстовый редактор</span>
+                <span class="os-badge">Программирование</span>
+                <span class="os-badge">Подсветка синтаксиса</span>
+            </div>
+            <p>Мощный текстовый редактор для программистов. Поддержка множества языков, плагины и макросы.</p>
+            <a href="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6/npp.8.6.Installer.x64.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- VS CODE -->
+        <div class="program-card" data-search="vs code visual studio code редактор программирование">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/visual-studio-code-2019.png" alt="VS Code">
+            </div>
+            <div class="program-info">
+                <h3>VS Code <span class="version">1.86.2</span></h3>
+                <span class="program-size">80 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Редактор кода</span>
+                <span class="os-badge">Разработка</span>
+                <span class="os-badge">Расширения</span>
+            </div>
+            <p>Мощный редактор кода от Microsoft с поддержкой отладки, контроля версий и тысяч расширений.</p>
+            <a href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
+
+        <!-- Roblox -->
+        <div class="program-card" data-search="roblox игра платформа">
+            <div class="program-icon">
+                <img src="https://img.icons8.com/color/144/000000/roblox.png" alt="Roblox">
+            </div>
+            <div class="program-info">
+                <h3>Roblox <span class="version">2.586.874</span></h3>
+                <span class="program-size">200 МБ</span>
+            </div>
+            <div class="badges-container">
+                <span class="os-badge">Игровая платформа</span>
+                <span class="os-badge">Многопользовательская</span>
+                <span class="os-badge">Создание игр</span>
+            </div>
+            <p>Платформа для создания и запуска многопользовательских игр. Миллионы игр на любой вкус.</p>
+            <a href="https://setup.rbxcdn.com/RobloxPlayerLauncher.exe" class="download-btn">
+                <img src="https://img.icons8.com/color/96/000000/download--v1.png" class="btn-icon" alt="Скачать">
+                Скачать
+            </a>
+        </div>
     </div>
 
-    <!-- Кнопка "Наверх" для smooth scroll -->
+    <!-- Кнопка "Наверх" -->
     <div class="scroll-to-top" id="scrollToTop" title="Наверх">
         ↑
     </div>
 
     <footer>
         <p>© 2024 Каталог Программ • Все ссылки ведут на официальные сайты разработчиков</p>
-        <p style="font-size: 1em; opacity: 0.8; margin-bottom: 25px;">Безопасное скачивание гарантировано</p>
+        <p style="font-size: 1em; opacity: 0.9; margin-bottom: 25px;">Безопасное скачивание гарантировано</p>
         <div class="footer-links">
             <a href="#about">О проекте</a>
             <a href="#safety">Проверка безопасности</a>
@@ -931,8 +1419,17 @@
                 loaderWrapper.classList.add('hidden');
                 setTimeout(() => {
                     loaderWrapper.style.display = 'none';
+                    
+                    // Инициализация карточек после загрузки
+                    const cards = document.querySelectorAll('.program-card');
+                    cards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100 + (index * 50));
+                    });
                 }, 500);
-            }, 1500);
+            }, 1200);
         };
 
         // Анимация заголовка
@@ -943,7 +1440,8 @@
             "Discord • 64gram • Запрет",
             "Яндекс Музыка • Thonny",
             "Maku Tweaker • 7-Zip • VLC",
-            "Prism Launcher • Программы"
+            "VS Code • Firefox • OBS Studio",
+            "Roblox • Notepad++ • Paint.NET"
         ];
         let index = 0;
 
@@ -989,7 +1487,7 @@
             });
         });
 
-        // ПРОСТОЙ И НАДЁЖНЫЙ ПОИСК ПО САЙТУ - ИСПРАВЛЕННЫЙ
+        // ПРОСТОЙ И НАДЁЖНЫЙ ПОИСК ПО САЙТУ
         const searchInput = document.getElementById('searchInput');
         const searchButton = document.getElementById('searchButton');
         const searchResults = document.getElementById('searchResults');
@@ -997,7 +1495,7 @@
         const programCards = document.querySelectorAll('.program-card');
         const totalPrograms = programCards.length;
 
-        // Функция поиска - ИСПРАВЛЕННАЯ
+        // Функция поиска
         function performSearch() {
             const searchTerm = searchInput.value.toLowerCase().trim();
             let foundCount = 0;
@@ -1021,7 +1519,7 @@
                 const title = card.querySelector('h3').textContent.toLowerCase();
                 const description = card.querySelector('p').textContent.toLowerCase();
                 
-                // Проверяем совпадения в разных местах
+                // Проверяем совпадения
                 const matches = searchData.includes(searchTerm) || 
                                title.includes(searchTerm) || 
                                description.includes(searchTerm);
@@ -1061,7 +1559,6 @@
 
         // Обработчики событий для поиска
         searchInput.addEventListener('input', function() {
-            // Задержка для предотвращения частых обновлений
             clearTimeout(this.searchTimeout);
             this.searchTimeout = setTimeout(performSearch, 300);
         });
@@ -1130,7 +1627,7 @@
             }
             
             mark.search-highlight {
-                background: linear-gradient(135deg, #3498db, #2ecc71);
+                background: linear-gradient(135deg, #8b5cf6, #3b82f6);
                 color: white;
                 padding: 2px 4px;
                 border-radius: 3px;
@@ -1138,37 +1635,25 @@
         `;
         document.head.appendChild(style);
 
-        // Анимация при наведении на карточки
-        const cards = document.querySelectorAll('.program-card');
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                cards.forEach(c => {
-                    if (c !== this && !c.classList.contains('hidden')) {
-                        c.style.opacity = '0.7';
-                        c.style.transform = 'scale(0.98)';
-                    }
-                });
-            }.bind(card));
-            
-            card.addEventListener('mouseleave', function() {
-                cards.forEach(c => {
-                    if (!c.classList.contains('hidden')) {
-                        c.style.opacity = '1';
-                        c.style.transform = 'scale(1)';
-                    }
-                });
-            }.bind(card));
-        });
-
-        // Плавное появление карточек при загрузке
-        window.addEventListener('load', function() {
+        // Адаптивное поведение для мобильных
+        function handleMobileLayout() {
+            const isMobile = window.innerWidth <= 768;
             const cards = document.querySelectorAll('.program-card');
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.1}s`;
-            });
-        });
+            
+            if (isMobile) {
+                cards.forEach(card => {
+                    card.style.animation = 'none';
+                    card.style.opacity = '1';
+                    card.style.transform = 'none';
+                });
+            }
+        }
 
-        // Инициализация поиска при загрузке
+        // Инициализация при загрузке и изменении размера окна
+        window.addEventListener('load', handleMobileLayout);
+        window.addEventListener('resize', handleMobileLayout);
+
+        // Инициализация поиска
         performSearch();
     </script>
 </body>
